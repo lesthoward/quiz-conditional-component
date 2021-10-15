@@ -1,0 +1,152 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+    font-family: 'Fira Code', 'Segoe UI';
+    background: #083D77;
+	font-size: 16px;
+}
+
+*, 
+*::before, 
+*::after  {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+.container {
+    width: 800px;
+    max-width: 90%;
+    margin: auto;
+	margin: 5rem auto ;
+}
+
+.list {
+    background: #EBEBD3;
+    padding: 7rem 5rem ;
+	box-shadow: .2rem .2rem 1rem rgba(0, 0, 0, .1);
+	border-radius: .5rem;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.5rem;
+}
+
+.list__title {
+	color: var(--primary-color);
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2rem;
+	letter-spacing: .3rem;
+	border-bottom: .3rem solid #000;
+	margin-bottom: 3rem;
+	align-self: flex-start;
+}
+
+.card {
+	display: grid;
+	grid-template-columns: 30% 1fr;
+	background: #f2f2f2;
+	border-radius: .5rem;
+	overflow: hidden;
+	box-shadow: .1rem .1rem .5rem rgba(0, 0, 0, .2);
+	transition: all .5s ease;
+}
+
+.card:hover  {
+	grid-template-columns: 40% 1fr;
+	cursor: pointer;
+}
+
+.card__image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.card__img {
+	height: 100%;
+	object-fit: cover;
+	vertical-align: top;
+	transition: all ease .3s ;
+}
+
+.card__content {
+	padding: 2rem;
+}
+
+.card__content > * {
+	margin: 1rem;
+}
+
+.card__name {
+	display: flex;
+}
+
+.card__title {
+	/* font-weight: bold; */
+	letter-spacing: .3rem;
+	margin-right: .5rem ;
+}
+
+.change__screen {
+	padding: 1rem 2rem;
+	background: #fff;
+	border: none;
+	border-radius: .5rem;
+	margin-bottom: 2.5rem;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+
+.change__screen:active {
+	transform: scale(1.5);
+}
+
+.message {
+	background: #94FBAB;
+	padding: 1rem 2rem;
+	border-radius: .5rem;
+	margin-left: 1rem;
+}
+
+.card__buttons {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 1rem;
+	row-gap: 1rem;
+}
+
+.card__button {
+	padding: 1.5rem 2rem;
+	/* border: none; */
+}
+
+.no-available{
+	background: #c04343;
+	color: #fff;
+	border-radius: .5rem;
+	padding: 2rem ;
+}
+
+@media screen and (max-width:768px){
+	.card{
+		grid-template-columns: 100%;
+	}
+
+	.card:hover {
+		grid-template-columns: 100%;
+	}
+
+	.card__img {
+		max-height: 20rem;
+	}
+}
